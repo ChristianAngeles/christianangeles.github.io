@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari Exemple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #000;
+            color: snow;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            /* Hace que el header se quede fijo en la parte superior */
+            width: 100%;
+            /* Asegura que el header ocupe el 100% del ancho de la pantalla */
+            top: 0;
+        }
+
+        .logoEmpresa {
+            height: 10%;
+            width: 10%;
+        }
+
+        nav {
+            background-color: #000;
+            padding: 1em;
+            text-align: center;
+            width: 45%
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<header>
+    <a href="index.html"><img src="favicon.png" alt="logoempresa" class="logoEmpresa"></a>
+    <nav>
+        <ul>
+            <li><a href="tailandia.html">Tailandia</a></li>
+            <li><a href="malta.html">Malta</a></li>
+            <li><a href="grecia.html">Grecia</a></li>
+            <li><a href="part_II.html">PART II</a></li>
+            <li><a href="part_III.html">Formulari</a></li>
+        </ul>
+    </nav>
+</header>
+
+<body>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Formulari - Part III</legend>
+
+            <!-- Etiqueta i Input amb atributs -->
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" placeholder="Introdueix el teu nom" required maxlength="50"
+                autocomplete="on" autofocus>
+
+            <!-- Etiqueta i Select amb opcions -->
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="" disabled selected>Selecciona el viatje</option>
+                <option value="tailandia">Bangkok, Tailandia</option>
+                <option value="malta">Malta</option>
+                <option value="grecia">Santorini, Grècia</option>
+            </select>
+
+            <!-- Etiqueta i TextArea amb atributs -->
+            <label for="comentaris">Comentaris:</label>
+            <textarea id="comentaris" name="comentaris" rows="4" cols="50"
+            placeholder="Escriu els teus comentaris"></textarea>
+            
+            <!-- Etiqueta i Input amb Datalist -->
+            <label for="destins">A quin altre país t'agradaria viatjar: </label>
+            <input type="text" id="destins" name="destins" list="llista-destins" placeholder="Escriu o selecciona el teu destí">
+            <datalist id="llista-destins">
+                <option value="París, França"></option>
+                <option value="Tokyo, Japó"></option>
+                <option value="Oporto, Portugal"></option>
+                <option value="Londres, Inglaterra"></option>
+            </datalist>
+            
+            <!-- Botó d'enviament -->
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+    
+</body>
+
+</html>

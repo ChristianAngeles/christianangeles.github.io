@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Multimedia y API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        iframe {
+            width: 800px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>AFEGIR CONTINGUT MULTIMEDIA: VIDEO de YouTube</h1>
+
+    <p>Reproduce el video de YouTube:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QwLvrnlfdNo?si=X4Z0AxAUjGCJqAPt"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <h1>AFEGIR 1 API que cuente los clicks</h1>
+
+    <h3>Contador de clicks</h3>
+    <p>clicks: <span id="contador">0</span></p>
+
+    <script src="contador.js"></script>
+
+</body>
+
+</html>
